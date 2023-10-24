@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+years=[2020,2021,2022,2023]
+scale=[121,181,244,343]
+plt.plot(years, scale, marker='o', linestyle='-')
+plt.xlabel('연도')
+plt.ylabel('규모(억 원)')
+plt.title('AI 반도체 시장 규모')
+
+for i in range(len(years)):
+    plt.text(years[i], scale[i], str(scale[i]), ha='center', va='bottom')
+             
+plt.grid(True)
+plt.show()
